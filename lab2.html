@@ -1,0 +1,47 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>lab2</title>
+
+        <style>
+            #cvjob {
+                border: 2px solid #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Jaruwat Thongchana</h1>
+            <h3>Lab 2: Line</h3>
+        </div>
+
+        <canvas id="cvjob"> </canvas>
+        <script>
+            let canvas = document.getElementById('cvjob')
+            let ctx = canvas.getContext('2d')
+
+            ctx.canvas.width = window.innerWidth / 4.5
+            ctx.canvas.height = window.innerHeight / 4
+
+            const bgImage = `http://placekitten.com/${ctx.canvas.width}/${ctx.canvas.height}`
+            canvas.style.backgroundImage = `url('${bgImage}')`
+
+            ctx.beginPath()
+            ctx.moveTo(canvas.width / 2, 0)
+            ctx.lineTo(canvas.width / 2, canvas.height)
+            ctx.lineWidth = 4
+            ctx.strokeStyle = '#ffffff'
+            ctx.lineCap = 'round'
+            ctx.stroke()
+
+            ctx.beginPath()
+            ctx.moveTo(0, canvas.height / 2)
+            ctx.lineTo(canvas.width, canvas.height / 2)
+            ctx.lineWidth = 4
+            ctx.strokeStyle = '#ffffff'
+            ctx.lineCap = 'round'
+            ctx.stroke()
+        </script>
+    </body>
+</html>

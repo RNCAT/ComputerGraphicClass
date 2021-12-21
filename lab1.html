@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Computer Graphic</title>
-    </head>
-    <body>
-        <canvas id="mycv" width="300" height="400ZZZ" style="background-color: black"> </canvas>
 
-        <div>
-            <h1>Jaruwat Thongchana</h1>
-            <h3>Lab 1: Pixel & Rectangle</h3>
-        </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Graphic</title>
+</head>
 
-        <script>
-            let canvas = document.getElementById('mycv')
+<body>
+    <div>
+        <h1>Lab 1: Pixel & Rectangle</h1>
+    </div>
 
-            let redTop = canvas.getContext('2d')
-            redTop.fillStyle = '#A51931'
-            redTop.fillRect(20, 100, 250, 30)
+    <canvas id="mycv" width="300" height="400ZZZ" style="background-color: black"> </canvas>
 
-            let white1 = canvas.getContext('2d')
-            white1.fillStyle = '#F4F5F8'
-            white1.fillRect(20, 130, 250, 30)
+    <script>
+        let canvas = document.getElementById('mycv')
 
-            let blue = canvas.getContext('2d')
-            blue.fillStyle = '#2D2A4A'
-            blue.fillRect(20, 160, 250, 50)
+        let redTop = canvas.getContext('2d')
+        redTop.fillStyle = '#A51931'
+        redTop.fillRect(20, 100, 250, 30)
 
-            let white2 = canvas.getContext('2d')
-            white2.fillStyle = '#F4F5F8'
-            white2.fillRect(20, 210, 250, 30)
+        let white1 = canvas.getContext('2d')
+        white1.fillStyle = '#F4F5F8'
+        white1.fillRect(20, 130, 250, 30)
 
-            let redLow = canvas.getContext('2d')
-            redLow.fillStyle = '#A51931'
-            redLow.fillRect(20, 240, 250, 30)
-        </script>
-    </body>
+        let blue = canvas.getContext('2d')
+        blue.fillStyle = '#2D2A4A'
+        blue.fillRect(20, 160, 250, 50)
+
+        let white2 = canvas.getContext('2d')
+        white2.fillStyle = '#F4F5F8'
+        white2.fillRect(20, 210, 250, 30)
+
+        let redLow = canvas.getContext('2d')
+        redLow.fillStyle = '#A51931'
+        redLow.fillRect(20, 240, 250, 30)
+    </script>
+</body>
+
 </html>

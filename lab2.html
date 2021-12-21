@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lab2</title>
+    <title>Lab2: Line</title>
 
     <style>
         #cvjob {
@@ -13,18 +13,14 @@
 </head>
 
 <body>
-    <div>
-        <h1>Lab 2: Line</h1>
-    </div>
-
     <canvas id="cvjob"> </canvas>
 
     <script>
         let canvas = document.getElementById('cvjob')
         let ctx = canvas.getContext('2d')
 
-        ctx.canvas.width = window.innerWidth / 4.5
-        ctx.canvas.height = window.innerHeight / 4
+        ctx.canvas.width = window.innerWidth
+        ctx.canvas.height = window.innerHeight
 
         const bgImage = `http://placekitten.com/${ctx.canvas.width}/${ctx.canvas.height}`
         canvas.style.backgroundImage = `url('${bgImage}')`

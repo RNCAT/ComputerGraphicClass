@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab3: Circle</title>
+
+  <style>
+    #cvjob {
+      border: 1px solid #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="cvjob" width="400" height="200"> </canvas>
+  <script>
+    let canvas = document.getElementById('cvjob')
+    let ctx = canvas.getContext('2d')
+
+    const halfWidth = (canvas.width / 2) - 25
+    const treeHeight = canvas.height / 3
+    const startAng = 0
+    const stopAng = 2 * Math.PI
+    const radius = 50
+    const colors = ['#EA2552', '#1E8755', '#2C2C6A']
+
+    function createCircle(x, y, color) {
+      ctx.beginPath()
+      ctx.arc(x, y, radius, startAng, stopAng)
+      ctx.globalCompositeOperation = "lighter"
+      ctx.fillStyle = color
+      ctx.fill()
+      ctx.closePath()
+    }
+
+    for (let i = 0, wStart = 0; i < 3; i++, wStart += 25) {
+      const x = halfWidth + wStart
+      const y = i % 2 ? treeHeight + 50 : treeHeight
+      createCircle(x, y, colors[i])
+    }
+
+    // createCircle(halfWidth - 25, treeHeight, '#EA2552')
+    // createCircle(halfWidth, treeHeight + 50, '#1E8755')
+    // createCircle(halfWidth + 25, treeHeight, '#2C2C6A')
+  </script>
+</body>
+
+</html>

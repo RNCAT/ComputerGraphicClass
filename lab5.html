@@ -18,13 +18,13 @@
     let canvas = document.getElementById('alpaca')
     let ctx = canvas.getContext('2d')
 
-    function writeText(text, x, y) {
+    function writeText(text, size, x, y) {
       let gradient = ctx.createLinearGradient(0, 0, canvas.width, 0)
       gradient.addColorStop("0", "magenta")
       gradient.addColorStop("0.5", "blue")
       gradient.addColorStop("1.0", "red")
 
-      ctx.font = "14px Verdana"
+      ctx.font = `${size}px Verdana`
       ctx.fillStyle = gradient
       ctx.fillText(text, x, y)
     }
@@ -44,7 +44,8 @@
     }
 
     writeMsgBox()
-    writeText('Jaruwat', 60, 80)
+    writeText('Jaruwat', 12, 60, 70)
+    writeText('Thongchana', 10, 55, 85)
   </script>
 </body>
 

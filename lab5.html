@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab5: quadraticCurve</title>
+
+  <style>
+    #alpaca {
+      border: 1px solid #000000
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="alpaca" width="200" height="200"> </canvas>
+  <script>
+    let canvas = document.getElementById('alpaca')
+    let ctx = canvas.getContext('2d')
+
+    function writeText(text, x, y) {
+      let gradient = ctx.createLinearGradient(0, 0, canvas.width, 0)
+      gradient.addColorStop("0", "magenta")
+      gradient.addColorStop("0.5", "blue")
+      gradient.addColorStop("1.0", "red")
+
+      ctx.font = "14px Verdana"
+      ctx.fillStyle = gradient
+      ctx.fillText(text, x, y)
+    }
+
+    function writeMsgBox() {
+      ctx.beginPath()
+      ctx.moveTo(100, 50)
+      ctx.quadraticCurveTo(50, 40, 50, 80)
+      ctx.quadraticCurveTo(50, 100, 75, 100)
+      ctx.quadraticCurveTo(65, 115, 50, 120)
+      ctx.quadraticCurveTo(75, 115, 85, 100)
+      ctx.quadraticCurveTo(120, 100, 120, 80)
+      ctx.quadraticCurveTo(120, 50, 100, 50)
+      ctx.lineWidth = 2
+      ctx.stroke()
+      ctx.closePath()
+    }
+
+    writeMsgBox()
+    writeText('Jaruwat', 60, 80)
+  </script>
+</body>
+
+</html>

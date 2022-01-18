@@ -3,19 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
   <title>Lab3: Circle</title>
-
-  <style>
-    #cvjob {
-      border: 1px solid #000000;
-    }
-  </style>
 </head>
 
 <body>
-  <canvas id="cvjob" width="400" height="200"> </canvas>
+  <canvas id="alpaca" width="400" height="200"> </canvas>
   <script>
-    let canvas = document.getElementById('cvjob')
+    let canvas = document.getElementById('alpaca')
     let ctx = canvas.getContext('2d')
 
     const halfWidth = (canvas.width / 2) - 25
@@ -39,10 +34,6 @@
       const y = i % 2 ? treeHeight + 50 : treeHeight
       createCircle(x, y, colors[i])
     }
-
-    // createCircle(halfWidth - 25, treeHeight, '#EA2552')
-    // createCircle(halfWidth, treeHeight + 50, '#1E8755')
-    // createCircle(halfWidth + 25, treeHeight, '#2C2C6A')
   </script>
 </body>
 

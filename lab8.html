@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Lab8: Pattern</title>
+  <style>
+    body {
+      background-color: whitesmoke;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="alpaca"> </canvas>
+  <script>
+    const canvas = document.getElementById('alpaca')
+    const ctx = canvas.getContext('2d')
+
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+
+    const createPattern = (imagePath, patternStyle) => {
+      let img = new Image()
+      img.src = imagePath
+
+      img.onload = () => {
+        const pattern = ctx.createPattern(img, patternStyle)
+        ctx.fillStyle = pattern
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+      }
+    }
+
+    createPattern('./img/cat.jpeg', 'repeat')
+  </script>
+</body>
+
+</html>

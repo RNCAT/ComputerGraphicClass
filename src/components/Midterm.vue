@@ -5,7 +5,7 @@
     </header>
     <div class="card-content">
       <div class="content">
-        <canvas id="midterm" width="180" height="200"></canvas>
+        <canvas id="midterm" width="180" height="300"></canvas>
       </div>
     </div>
   </div>

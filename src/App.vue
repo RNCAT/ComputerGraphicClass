@@ -9,6 +9,7 @@ import Lab7 from './components/Lab7.vue'
 import Lab8 from './components/Lab8.vue'
 import Lab9 from './components/Lab9.vue'
 import Lab10 from './components/Lab10.vue'
+import Lab11 from './components/Lab11.vue'
 import Midterm from './components/Midterm.vue'
 import Footer from './components/Footer.vue'
 </script>
@@ -55,6 +56,11 @@ import Footer from './components/Footer.vue'
     <div class="columns">
       <div class="column">
         <Lab10 />
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <Lab11 />
       </div>
     </div>
   </div>
